@@ -1,0 +1,151 @@
+INSERT INTO Voluntario(id,nombre,disponibilidad,telefono,direccion, correo_electronico, rut, ubicacion)
+VALUES(1,'Juan','TRUE','+1234234','santiago','aa@aa.com', '12345678-0', ST_GeomFromText('POINT(-70.64505867892976 -33.439188134551740 )' , 4326 )),
+       (2, 'Pedro','TRUE','+1231231','Independencia','p@gmail.com', '15463423-0', ST_GeomFromText('POINT(-70.67931154915112 -33.450473258516844)' , 4326 )), 
+       (3, 'Diego', 'TRUE', '+5432122', 'melipilla', 'udhe@hotmail.com', '11231239-0',ST_GeomFromText('POINT(-70.736563 -34.168468 )' , 4326 )),
+       (4, 'Ana', 'TRUE', '+1234567', 'puente alto', 'ana@gmail.com', '11235264-0',ST_GeomFromText('POINT(-70.64505867892976 -34.439188134551740 )' , 4326 )),
+       (5, 'Juana', 'TRUE', '+1234567', 'La florida', 'juana@gmail.com', '20235564-0',ST_GeomFromText('POINT(-74.77520751452163 -51.25681404813063 )' , 4326 )),
+       (6, 'Bryan', 'TRUE', '+1234567', 'La pintana', 'bryan@gmail.com', '21235567-0',ST_GeomFromText('POINT(-71.94073485330969 -53.27347906979301 )' , 4326 )),
+       (7, 'Gaston', 'TRUE', '+1234567', 'Lo barnechea', 'gaston@gmail.com', '21338564-0',ST_GeomFromText('POINT(-71.62670387791077 -33.049942010707916 )' , 4326 )),
+       (8, 'Renato', 'TRUE', '+1234567', 'vitacura', 'renato@gmail.com', '11237564-0',ST_GeomFromText('POINT(-71.56511924199752 -33.01896621847035 )' , 4326 )),
+       (9, 'Elmer', 'TRUE', '+1234567', 'la reina', 'elmer@gmail.com', '11235864-0',ST_GeomFromText('POINT(-73.9182739429091 -42.587531842463264 )' , 4326 )),
+       (10, 'Rama', 'TRUE', '+1234567', 'providencia', 'rama@gmail.com', '11238564-0',ST_GeomFromText('POINT(-71.60565184664229 -33.62155486393517 )' , 4326 )),
+       (11, 'Elsa', 'TRUE', '+1234567', 'puente alto', 'elsa@gmail.com', '11239564-0',ST_GeomFromText('POINT(-69.86981203209075 -28.726799873363124 )' , 4326 )),
+       (12, 'Anuel', 'TRUE', '+1234567', 'Renca', 'anuel@gmail.com', '11235964-0',ST_GeomFromText('POINT(-68.93048098847193 -22.469498525931154 )' , 4326 )),
+       (13, 'Wisin', 'TRUE', '+1234567', 'quilicura', 'wisin@gmail.com', '11231564-0',ST_GeomFromText('POINT(-68.55694583718375 -27.00400452533806 )' , 4326 )),
+       (14, 'Yandel', 'TRUE', '+1234567', 'Talagante', 'yandel@gmail.com', '21235564-0',ST_GeomFromText('POINT(-70.64505867976 -34.43918811740 )' , 4326 )),
+       (15, 'Luis', 'TRUE', '+1234567', 'pudahuel', 'luis@gmail.com', '11235564-0',ST_GeomFromText('POINT(-69.79969959260076 -33.41562738741247 )' , 4326 )),
+       (16, 'Jean', 'TRUE', '+1234567', 'pirque', 'jean@gmail.com', '11295564-0',ST_GeomFromText('POINT(-70.64505867892236 -34.439188134551409 )' , 4326 )),
+       (17, 'Jerry', 'TRUE', '+1234567', 'providencia', 'jerry@gmail.com', '12235564-0',ST_GeomFromText('POINT(-70.686801 -33.449933)' , 4326 )),
+       (18, 'Tom', 'TRUE', '+1234567', 'estacion central', 'tom@gmail.com', '18235464-0',ST_GeomFromText('POINT(-72.45982168117861 -35.70402963170241 )' , 4326 )),
+       (19, 'Homero', 'TRUE', '+1234567', 'talagante', 'homero@gmail.com', '19225564-0',ST_GeomFromText('POINT(-70.605939546562 -33.34154951407608 )' , 4326 )),
+       (20, 'Mateo', 'TRUE', '+1234567', 'santiago', 'mateo@gmail.com', '11243264-0',ST_GeomFromText('POINT(-70.6450586245976 -34.43918813231740 )' , 4326 ));
+       
+
+INSERT INTO Institucion(id,nombre,direccion,telefono,dominio)
+VALUES(1,'caritas Felices','calle 100pre viva 1234','163465','@caritas.cl'),
+	(2,'Help Forever','calle 100pre viva 4567','163465','@helpf.cl'),
+      (3,'Espiritu Solidario','calle 100pre viva 7890','163465','@espiritus.cl'),
+      (4,'Ayudar Todos','calle 100pre viva 0000','163465','@ayudart.cl'),
+      (5,'Chile Arriba','calle 100pre viva 0201','163465','@chilea.cl');
+             
+INSERT INTO Emergencia(id,titulo,direccion,descripcion,id_institucion,activo, ubicacion)
+VALUES(1,'Terremoto 9.5','Region Metropolitana','Cientos de hogares afectados','5', TRUE, ST_GeomFromText('POINT(-70.642486245976 -34.4392153231740 )', 4326)),
+      (2,'Incendio forestal','Cerro San Cristobal','Incendio a un lado del zoologico','2', FALSE, ST_GeomFromText('POINT(-70.7450586245976 -34.432219413231740 )', 4326)),
+      (3,'Aluvion','Cajon del Maipo','muchos escombros y barro','3', TRUE,ST_GeomFromText('POINT(-70.7550586245976 -34.432194413231740 )', 4326)),
+      (4,'Tsunami','Constitucion','destruccion total','4', TRUE, ST_GeomFromText('POINT(-70.942494 -33.6744170)', 4326)),
+      (5,'Incendio forestal','La Araucania','miles de hectareas afectadas','1', TRUE, ST_GeomFromText('POINT(-70.538068 -33.445361)', 4326)),
+      (6,'Inundacion','Recoleta','perdida total','1', TRUE, ST_GeomFromText('POINT(-70.7750586245976 -34.43219413231740 )', 4326)),
+      (7,'Erupcion volcanica','Villa Rica','lava volcanica por todas partes','2', TRUE, ST_GeomFromText('POINT(-71.558512 -33.049170)', 4326)),
+      (8,'Avalancha','Farellones','personas desaparecisas ','3', TRUE, ST_GeomFromText('POINT(-70.7450586243976 -34.432194135231740 )', 4326)),
+      (9,'Tormenta','Region Metropolitana','levantamiento de techumbre','4', TRUE, ST_GeomFromText('POINT(-70.745058635976 -34.432194132321740 )', 4326)),
+      (10,'Tornado','Puerto Montt','destruccion muelle y botes','5', TRUE, ST_GeomFromText('POINT(-70.7450586235976 -34.43219413231710 )' ,4326));
+
+INSERT INTO Habilidad(id,nombreH,descripcion)
+VALUES(1,'Habilidad 1','Todo lo relacionado con construccion'),
+      (2,'Habilidad 2','calmar y controlar personas'),
+      (3,'Habilidad 3','organizar y repartir alimentos'),
+      (4,'Habilidad 4','manejo de heridas y enfermedades'),
+      (5,'Habilidad 5','liderazgo y proactividad');
+     
+INSERT INTO Eme_habilidad(id,id_habilidad,id_emergencia)
+VALUES(1,1,1),
+      (2,2,4),
+      (3,3,5),
+      (4,4,3),
+      (5,5,2),
+      (6,5,6),
+      (7,4,7),
+      (8,3,8),
+      (9,4,9),
+      (10,1,10),
+      (11,1,1),
+      (12,2,2),
+      (13,3,3),
+      (14,4,4),
+      (15,5,5),
+      (16,3,6),
+      (17,2,7),
+      (18,1,8),
+      (19,4,9),
+      (20,5,10);
+      
+     
+INSERT INTO Estado_tarea(id,estado)
+VALUES (1, TRUE),
+       (2, FALSE);
+
+INSERT INTO Tarea( id,titulo ,descripcion,cant_voluntarios,id_estado,id_emergencia)
+VALUES(1,'Buscar personas','Busqueda de personas desaparecidad',10, 1, 1),
+      (2,'Quitar escombros','Remover escombros de la emergencia',100, 2,2),
+      (3,'Recontruir casas','Reconstruir casas dañadas',400, 1, 3),
+      (4,'Limpiar calles','Quitar todo tipo de basura o deshecho',100, 1,4),
+      (5,'Cocinar','Cocina comunitaria',10, 1, 5),
+      (6,'Evacuar','Dirigir a las personas a una zona segura', 50, 1,6),
+      (7,'Quitar Barro','Sacar barro de calles, casas',200, 1,7),
+      (8,'Rescatar mascotas','Llevar a un lugar seguro a las mascotas',34,1,8),
+      (9,'Realizar encuestas','Realizas catastros de personas afectadas',90,1,9),
+      (10,'Repartir comida y aseo','distribuir alimentos y utilies de aseo',300,1,10);
+
+
+
+INSERT INTO Tarea_Habilidad(id, id_tarea, id_eme_habilidad)
+VALUES (1,1,10),
+       (2,2,9),
+       (3,3,8),
+       (4,4,7),
+       (5,5,6),
+       (6,6,5),
+       (7,7,4),
+       (8,8,3),
+       (9,9,2),
+       (10,10,1),
+       (11,10,10),
+       (12,9,7),
+       (13,8,8),
+       (14,7,9),
+       (15,6,6),
+       (16,5,4),
+       (17,4,5),
+       (18,3,2),
+       (19,2,3),
+       (20,1,1);
+
+INSERT INTO Vol_Habilidad(id,id_voluntario,id_habilidad)
+VALUES (1,1,1),
+       (2,2,2),
+       (3,3,3),
+       (4,4,4),
+       (5,5,5),
+       (6,6,5),
+       (7,7,4),
+       (8,8,3),
+       (9,9,2),
+       (10,10,1),
+       (11,12,2),
+       (12,12,3),
+       (13,13,4),
+       (14,14,5),
+       (15,15,4),
+       (16,16,3),
+       (17,17,2),
+       (18,18,1),
+       (19,19,5),
+       (20,20,2),
+       (21,3,3),
+       (22,15,4),
+       (23,16,5),
+       (24,20,1),
+       (25,2,2),
+       (26,18,4),
+       (27,9,5),
+       (28,17,3),
+       (29,3,1),
+       (30,8,2);
+
+INSERT INTO Ranking( id,valor,id_tarea,id_voluntario)
+VALUES (1,100,1,1),
+       (2,100,2,2),
+       (3,100,10,3),
+       (4,100,5,4);
+
+     
